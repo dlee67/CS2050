@@ -1,0 +1,75 @@
+    def dijkstra(self, start):
+        ''' For all the nodes in the graph, set distance
+            equal to infinity and because equal to none '''
+
+        to_compare = []
+
+        for_unit_test = []
+
+        will_compare = None
+
+        for node in self.__nodes:
+
+            node.distance = float('inf')
+
+            node.because = None
+
+        ''' Set the source to the start, and start's distance
+            to zero '''
+
+        source = self.find(start)
+
+        source.distance = 0
+
+        ''' Create a to_compare set and add source to it '''
+
+        to_compare.append(source)
+
+        ''' While there is something to do '''
+        ''' Find the node with the minimum distance '''
+
+        while to_compare:
+
+            compared_with = float('inf')
+
+#I am really picking whatever node I can find at this point.
+#Taking a considerationg that in the end of things,
+#the summed up distances are going to be compared,
+#that is the learning growth/curve I believe.
+            for node in to_compare:
+
+                if node.distance < compared_with:
+
+                    will_compare = node
+
+                    current_min_distance = node.distance
+
+#will compare reference haven't been overrided, I can still use it to
+#grow from this assignment.
+            to_compare.remove(will_compare)
+
+            for_unit_test.append([will_compare.distance, will_compare.value])
+
+#Now, I believe that this portion is what makes dikjstra's vision
+#truely dijkstra's vision.
+            for edge in will_compare.edges:
+
+#Must not have current_min_distance to be added with edge.weight
+#because current_min_distance is a distance that will be replaced or stay.
+                distance_to_compare = edge.weight + will_compare.distance
+
+#distance to compare is a distance I potentially want to replace the
+#distance that is assgined in the node class.
+
+                if distance_to_compare < edge.to_node.distance:
+
+                    edge.to_node.distance = distance_to_compare
+
+                    edge.to_node.because = will_compare
+
+#because I want to compare the node that I've found in this iteration
+#possibly in the next iteration, I will append that to to_compare, for
+#to_compare's nodes are to be popped off.
+                    to_compare.append(edge.to_node)
+
+        return for_unit_test

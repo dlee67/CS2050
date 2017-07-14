@@ -1,0 +1,5 @@
+#So I assign inf to all the values in nodes.
+
+for chamber in self.__nodes:
+
+    chamber.value = float('inf')

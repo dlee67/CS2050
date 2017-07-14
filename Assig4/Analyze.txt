@@ -1,0 +1,71 @@
+Q:
+Is there a way for me to iter and return a specific node
+some how?
+
+Q:
+Also, the parent method.
+
+Q:
+On the left.find(name),
+
+I believe that the node's method find will be
+ 
+called,
+
+however, I have a hard time understanding
+
+if left: return left
+
+and more.
+
+
+Q:
+In my belief,
+
+I think I am telling my computer that 
+
+Lisa = self.find(name)
+
+is please go find me a node that has a name called Lisa.
+
+Q:
+Do you think that he wants us to return "Homer"?
+
+Q:
+Is there a way to go back up a node in the binary tree?
+
+Or do I have to go around about this by using things like
+
+iter?
+
+A:Well, yes, sorta, I need to keep calling the parent of the
+
+node I just called.
+
+Q:
+if self:
+What does that mean?
+
+Q:
+You know you have a method that let's you print out everything?
+
+How can I write one?
+
+Where can I see one so I can write one.
+
+===================================================================
+
+I AM LOST WITH PLANNER,
+
+AT THIS POINT, I MIND AS WELL CREATE A NEW PROJECT.
+
+handy function that's in several programs without copying its
+
+definition into each program.
+
+
+==================================================================
+
+
+In my virtual machine, what is Right Ctrl 
+?????????????????????????????????????????
